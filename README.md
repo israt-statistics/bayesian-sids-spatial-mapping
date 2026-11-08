@@ -68,4 +68,9 @@ Northampton had 9 observed deaths and 2.87 expected, so its SIR is 3.13.
 Washington had an SIR of 2.50.
 These counties have small expected counts, so their SIRs can change a lot with a few extra cases.
 
-![Raw SIR map](
+![Raw SIR map](SIR_map.png)
+
+This map shows the raw SIR for each county. 
+
+An interactive version of this map is in the file `SIR_interactive.html`.
+Download the file and open it in a web browser. Click on a county to see its SIR. 
