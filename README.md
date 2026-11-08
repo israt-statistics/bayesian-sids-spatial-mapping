@@ -43,23 +43,23 @@ The model has no covariates, so it shows where risk is higher, but not why.
 
 ## R Packages
 
--`sf:` reads the North Carolina map data
+- `sf`: reads the North Carolina map data
 
--`spdep:` finds neighbouring counties
+- `spdep`: finds neighbouring counties
 
--`INLA:` fits the Bayesian BYM2 model
+- `INLA`: fits the Bayesian BYM2 model
 
--`ggplot2:` draws maps and plots
+- `ggplot2`: draws maps and plots
 
--`patchwork:` places two maps side by side
+- `patchwork`: places two maps side by side
 
--`mapview:` makes the interactive SIR map
+- `mapview`: makes the interactive SIR map
 
--`htmlwidgets:` saves the interactive map as an HTML file
+- `htmlwidgets`: saves the interactive map as an HTML file
 
 INLA is not on CRAN. Install it from https://www.r-inla.org/download-install
 
-## Result
+## Results
 
 ### Raw SIR
 
@@ -74,3 +74,11 @@ This map shows the raw SIR for each county.
 
 An interactive version of this map is in the file `SIR_interactive.html`.
 Download the file and open it in a web browser. Click on a county to see its SIR. 
+
+### Smoothed RR
+
+| County | SIR | RR | 95% interval |
+|---|---|---|---|
+| Anson | 4.73 | 2.37 | 1.29 to 4.05 |
+| Northampton | 3.13 | 2.15 | 1.19 to 3.63 |
+| Washington | 2.50 | 1.58 | 0.82 to 2.81 |
