@@ -40,3 +40,21 @@ SIR is unstable in small counties, so I wanted a more stable estimate.
 The model uses information from neighbouring counties. 
 It gives a relative risk (RR) for each county, with a 95% credible interval.
 The model has no covariates, so it shows where risk is higher, but not why.
+
+## R Packages
+
+-`sf:` reads the North Carolina map data
+
+-`spdep:` finds neighbouring counties
+
+-`INLA:` fits the Bayesian BYM2 model
+
+-`ggplot2:` draws maps and plots
+
+-`patchwork:` places two maps side by side
+
+-`mapview:` makes the interactive SIR map
+
+-`htmlwidgets:` saves the interactive map as an HTML file
+
+INLA is not on CRAN. Install it from https://www.r-inla.org/download-install
