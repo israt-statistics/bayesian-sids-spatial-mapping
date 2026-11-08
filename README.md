@@ -28,3 +28,5 @@ The 100 counties have 490 links in total.
 Each county has 4.9 neighbours on average ( range 2 to 9).
 No county is isolated. 
 This network is the spatial structure used by the BYM2 model.
+
+![County adjacency network](adjacency_graph.png)
