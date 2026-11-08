@@ -30,3 +30,6 @@ No county is isolated.
 This network is the spatial structure used by the BYM2 model.
 
 ![County adjacency network](adjacency_graph.png)
+
+Each point is a county and red lines connect neighbouring counties.
+
