@@ -33,3 +33,10 @@ This network is the spatial structure used by the BYM2 model.
 
 Each point is a county and red lines connect neighbouring counties.
 
+### 3. Bayesian model
+
+I used a Bayesian BYM2 model in R-INLA. 
+SIR is unstable in small counties, so I wanted a more stable estimate. 
+The model uses information from neighbouring counties. 
+It gives a relative risk (RR) for each county, with a 95% credible interval.
+The model has no covariates, so it shows where risk is higher, but not why.
