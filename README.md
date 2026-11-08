@@ -82,3 +82,22 @@ Download the file and open it in a web browser. Click on a county to see its SIR
 | Anson | 4.73 | 2.37 | 1.29 to 4.05 |
 | Northampton | 3.13 | 2.15 | 1.19 to 3.63 |
 | Washington | 2.50 | 1.58 | 0.82 to 2.81 |
+
+The RR is lower than the SIR in all three counties. 
+For Anson and Northampton, the interval is fully above 1, so the risk is higher than average. 
+For Washington, the interval includes 1, so we cannot be sure. 
+
+![Raw SIR and smoothed RR](SIR_vs_RR_maps.png)
+
+The left map shows the raw SIR and the right map shows the smoothed RR.
+Both maps use the same colour scale. 
+
+48 of the 100 counties had an RR above 1, but only 5 had an interval fully above 1. 
+
+### Shrinkage 
+
+![SIR against RR](SIR_vs_RR_scatter.png)
+
+Each point is a county. The dashed line is where SIR equals RR. 
+Most points are below the line, so the model lowers the high SIRs. 
+Counties with few births ( small points) change the most. 
