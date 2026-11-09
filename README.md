@@ -103,3 +103,27 @@ Counties with a high SIR are below the line, so the model lowers them.
 Counties with a low SIR, including SIR = 0, are above the line, so the model raises them.
 Both move towards the average (RR=1)
 Counties with few births (small points) change the most. 
+
+## Limitations
+- The data are from 1974 and are grouped by county.
+- The model has no covariates, so it shows where risk is higher, but not why.
+- The results show patterns, not causes.
+- The intervals are wide because the expected counts are small. \
+
+## Requirements
+
+- R 4.6.1 (the version used in this project)
+- The R packages: sf, spdep, INLA, ggplot 2, patchwork, mapview, htmlwidgets
+- The first installation can take a long time, because sf and mapview need many other packages.
+
+## How to run
+
+1. Install the packages. In R, run:
+   
+   install.packages(c("sf", "spdep", "ggplot2", "patchwork", "mapview", "htmlwidgwts"))
+   
+   Then install INLA from https://www.r-inla.org/download-install
+2. Download the R script from this repository.
+3. Open the R script in R or RStudio.
+4. Run the script.
+   
