@@ -99,5 +99,7 @@ Both maps use the same colour scale.
 ![SIR against RR](SIR_vs_RR_scatter.png)
 
 Each point is a county. The dashed line is where SIR equals RR. 
-Most points are below the line, so the model lowers the high SIRs. 
-Counties with few births ( small points) change the most. 
+Counties with a high SIR are below the line, so the model lowers them.
+Counties with a low SIR, including SIR = 0, are above the line, so the model raises them.
+Both move towards the average (RR=1)
+Counties with few births (small points) change the most. 
