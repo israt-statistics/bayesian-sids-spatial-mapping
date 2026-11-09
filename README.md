@@ -123,7 +123,10 @@ Counties with few births (small points) change the most.
    install.packages(c("sf", "spdep", "ggplot2", "patchwork", "mapview", "htmlwidgwts"))
    
    Then install INLA from https://www.r-inla.org/download-install
-2. Download the R script from this repository.
+2. Download `nc_sids_bym2.R` from this repository.
 3. Open the R script in R or RStudio.
-4. Run the script.
+4. To save files, set the working directory first: Session> Set Working Directory> Choose Directory, and select a folder. 
+5. Run the script.
+
+The figures were exported from RStudio (Plots> Save as Image)
    
