@@ -3,7 +3,7 @@
 ## Overview
 Sudden infant death syndrome (SIDS) is the sudden, unexplained death of an infant under one year of age. This project uses county-level SIDS data from North Carolina in 1974 to identify counties with more deaths than expected. 
 
-Because counties differ in the number of births, deaths cannot be compared directly. So I calculated the standardized incidence ratio(SIR). SIR compares the observed deaths with the number expected under the statewide rate. An SIR above 1 means more deaths than expected, and below 1 means fewer.
+Because counties differ in the number of births, deaths cannot be compared directly. So I calculated the standardized incidence ratio (SIR). SIR compares the observed deaths with the number expected under the statewide rate. An SIR above 1 means more deaths than expected, and below 1 means fewer.
 
 However, SIR is unstable in small counties, where the expected count is low. A few extra cases can change the ratio a lot. It also gives no measure of uncertainty. So I fitted a Bayesian BYM2 model in R-INLA. This model borrows information from the neighbouring counties and gives smoothed relative risks with credible interval.
 
@@ -25,7 +25,7 @@ SIR = observed deaths / expected deaths.
 
 Counties that share a border are defined as neighbours (spdep, poly2nb).
 The 100 counties have 490 links in total.
-Each county has 4.9 neighbours on average ( range 2 to 9).
+Each county has 4.9 neighbours on average (range 2 to 9).
 No county is isolated. 
 This network is the spatial structure used by the BYM2 model.
 
@@ -101,26 +101,26 @@ Both maps use the same colour scale.
 Each point is a county. The dashed line is where SIR equals RR. 
 Counties with a high SIR are below the line, so the model lowers them.
 Counties with a low SIR, including SIR = 0, are above the line, so the model raises them.
-Both move towards the average (RR=1)
+Both move towards the average (RR=1).
 Counties with few births (small points) change the most. 
 
 ## Limitations
 - The data are from 1974 and are grouped by county.
 - The model has no covariates, so it shows where risk is higher, but not why.
 - The results show patterns, not causes.
-- The intervals are wide because the expected counts are small. \
+- The intervals are wide because the expected counts are small. 
 
 ## Requirements
 
 - R 4.6.1 (the version used in this project)
-- The R packages: sf, spdep, INLA, ggplot 2, patchwork, mapview, htmlwidgets
+- The R packages: sf, spdep, INLA, ggplot2, patchwork, mapview, htmlwidgets
 - The first installation can take a long time, because sf and mapview need many other packages.
 
 ## How to run
 
 1. Install the packages. In R, run:
    
-   install.packages(c("sf", "spdep", "ggplot2", "patchwork", "mapview", "htmlwidgwts"))
+   install.packages(c("sf", "spdep", "ggplot2", "patchwork", "mapview", "htmlwidgets"))
    
    Then install INLA from https://www.r-inla.org/download-install
 2. Download `nc_sids_bym2.R` from this repository.
@@ -128,5 +128,5 @@ Counties with few births (small points) change the most.
 4. To save files, set the working directory first: Session> Set Working Directory> Choose Directory, and select a folder. 
 5. Run the script.
 
-The figures were exported from RStudio (Plots> Save as Image)
+The figures were exported from RStudio (Plots> Export> Save as Image)
    
